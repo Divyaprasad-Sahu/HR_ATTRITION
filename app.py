@@ -8,8 +8,8 @@ import joblib
 import streamlit as st
 import plotly.express as px
 
-
-df = pd.read_csv(r"C:\Users\Divyaprasad\Downloads\WA_Fn-UseC_-HR-Employee-Attrition.csv")
+url="https://raw.githubusercontent.com/Divyaprasad-Sahu/HR_ATTRITION/refs/heads/main/WA_Fn-UseC_-HR-Employee-Attrition.csv"
+df = pd.read_csv(url)
 
 df["Attrition"] = df["Attrition"].map({"No": 0, "Yes": 1})
 df["BusinessTravel"] = df["BusinessTravel"].map({"Non-Travel": 1, "Travel_Rarely": 2, "Travel_Frequently": 3})
